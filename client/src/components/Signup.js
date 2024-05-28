@@ -17,6 +17,8 @@ export const SignupForm = () => {
       });
   }, [refreshPage]);
 
+  // yup is a library that works well with Formik
+  // Yup is a schema builder for runtime value parsing and validation.
   const formSchema = yup.object().shape({
     email: yup.string().email("Invalid email").required("Must enter email"),
     name: yup.string().required("Must enter a name").max(15),
